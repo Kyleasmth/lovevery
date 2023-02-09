@@ -4,6 +4,7 @@ import ChevronLeft from "@mui/icons-material/ChevronLeft";
 import ChevronRight from "@mui/icons-material/ChevronRight";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
+import Image from "next/image";
 
 interface KitImageListProps {
   kitData: KitItemType[];
@@ -62,7 +63,7 @@ const KitImageList: React.FC<KitImageListProps> = ({
           return (
             <div key={i} onClick={() => setIndex(i)}>
               <ImageListItem sx={styles} key={i}>
-                <img src={kit.src} alt={kit.imgAlt} />
+                <Image src={kit.src} alt={kit.imgAlt} width={66} height={50} />
               </ImageListItem>
             </div>
           );

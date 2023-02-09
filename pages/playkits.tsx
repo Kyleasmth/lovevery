@@ -167,7 +167,7 @@ const PlayKitsPage: React.FC = () => {
         return;
       }
     }
-  }, [birthday]);
+  }, [birthday, today]);
 
   const selectedKit = kitData[index];
   return (
