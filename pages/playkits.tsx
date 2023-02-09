@@ -174,7 +174,13 @@ const PlayKitsPage: React.FC = () => {
     <ThemeProvider theme={theme}>
       <div style={{ background: "white" }}>
         <NavBar />
-        <Grid container spacing={1} paddingLeft={20} paddingRight={20}>
+        <Grid
+          container
+          spacing={0}
+          direction="column"
+          alignItems="center"
+          justifyContent="center"
+        >
           <Grid xs={10}>
             <KitBreadCrumbs kitTitle={selectedKit?.kitTitle} />
           </Grid>
