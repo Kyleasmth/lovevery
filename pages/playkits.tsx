@@ -189,7 +189,7 @@ const PlayKitsPage: React.FC = () => {
                   quality={100}
                 />
               </Box>
-              <Box>
+              <Box maxWidth={700}>
                 <Typography
                   variant="h5"
                   style={{ marginRight: "1rem", marginBottom: "1rem" }}
