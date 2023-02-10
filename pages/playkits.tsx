@@ -91,11 +91,13 @@ const theme = createTheme({
 
 const BulletPointText: React.FC<{ text: string }> = ({ text }) => (
   <Box display="flex" alignItems="center" padding="5px">
-    <Stack direction="row" alignItems="center">
+    <Stack direction="row" alignItems="center" padding="5px">
       <Brightness1Icon
         sx={{
           color: "primary.main",
-          fin: "0.5rem",
+          width: "0.5rem",
+          height: "0.5rem",
+          marginRight: "5px",
         }}
       />
       <Typography color="textSecondary" fontWeight="bold" fontSize={12}>
@@ -172,7 +174,7 @@ const PlayKitsPage: React.FC = () => {
   const selectedKit = kitData[index];
   return (
     <ThemeProvider theme={theme}>
-      <div style={{ background: "white" }}>
+      <div style={{ background: "white", minHeight: "100vh" }}>
         <NavBar />
         <Grid
           container

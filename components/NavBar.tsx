@@ -62,7 +62,7 @@ export default function NavBar() {
             <Typography variant="h6" color="textSecondary">
               <Image
                 src="/loveverylogo.jpg"
-                width={250}
+                width={300}
                 height={70}
                 alt="Example image"
                 quality={100}
