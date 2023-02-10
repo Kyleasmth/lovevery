@@ -19,6 +19,8 @@ import KitBreadCrumbs from "../components/KitBreadCrumbs";
 import BirthdayDatePicker from "../components/BirthdayDatePicker";
 import KitImageList from "../components/KitImageList";
 
+import kitsTheme from "@/styles/kitsTheme";
+
 const kitData = [
   {
     kitTitle: "The Looker Play Kit",
@@ -77,18 +79,6 @@ const kitData = [
   },
 ];
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: green["A400"],
-    },
-    secondary: {
-      main: blue["A700"],
-      light: blue[400],
-    },
-  },
-});
-
 const BulletPointText: React.FC<{ text: string }> = ({ text }) => (
   <Box display="flex" alignItems="center" padding="5px">
     <Stack direction="row" alignItems="center" padding="5px">
@@ -128,7 +118,9 @@ const InputFields: React.FC<{
       />
     </Box>
     <Box display="flex" alignItems="center" padding="5px">
-      <Button variant="contained">Subscribe now</Button>
+      <Button variant="contained" style={{ color: "white" }}>
+        Subscribe now
+      </Button>
     </Box>
   </Stack>
 );
@@ -173,7 +165,7 @@ const PlayKitsPage: React.FC = () => {
 
   const selectedKit = kitData[index];
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={kitsTheme}>
       <div style={{ background: "white", minHeight: "100vh" }}>
         <NavBar />
         <Grid
